@@ -10,5 +10,5 @@
   <li>MySQL - Database</li>
   </ul>
 <h3>Contributors:</h3>
-Kamau Wanyee <br>
-Salome Monthe
+<a href="https://github.com/steekam">Kamau Wanyee</a> <br>
+<a href="https://github.com/salomechemiat">Salome Monthe</a>
