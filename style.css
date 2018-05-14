@@ -1,8 +1,21 @@
+html {
+	font-family: sans-serif;
+}
+
+body{
+	background-attachment: fixed;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url("image/try.jpg");
+	overflow: hidden;
+}
+
+
 .loginbox
 {
 	width : 320px;
 	height :420px;
-	background: #000;
+	background: transparent;
 	color: #fff;
 	top :50%;
 	left: 50%;
@@ -61,6 +74,11 @@ h2
 	font-weight: bold;
 
 }
+
+::placeholder{
+	color:#FFCACA;
+}
+
  .loginbox input{
  	width: 100%;
  	margin-bottom: 20px;
@@ -72,7 +90,7 @@ h2
  	background: transparent;
  	outline:none;
  	height:40px;
- 	color: #fff;
+ 	color: #FFCACA;
  	font-size:16px;
  }
 
@@ -89,21 +107,28 @@ h2
 
  }
 
-.loginbox input[type = "submit"]:hover
-{
+.loginbox input[type = "submit"]:hover{
 cursor: pointer;
-background: #ffc107;
+background: #FFCACA;
 color:#000;
 }
 .loginbox a {
 	text-decoration: none;
-	font-size:12px;
+	font-size:15px;
 	line-height: 20px;
-	color:red;
-
+	color: #FFCACA;
 }
-.loginbox a:hover
-{
-	color: #ffc107;
 
+.loginbox a:hover{
+	color: #ffc107;
+}
+
+.link-bottom{
+	padding: 20px;
+	margin-bottom: 10px;
+}
+
+#social-links{
+	margin-top: 30px;
+	text-align: center;
 }
