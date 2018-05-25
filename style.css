@@ -60,7 +60,6 @@ body{
 .login-wrapper input[type = "submit"]:hover, #btn-signUp:hover{
 	cursor: pointer;
 	background: #854A36;
-	color:#000;
 }
 
 .login-wrapper a {
