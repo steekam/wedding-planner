@@ -1,16 +1,49 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+
+
 html {
 	font-family: sans-serif;
 }
 
-body{
+/* 
+*
+* Utility classes
+*
+*/
+.hidden {
+	display: none;
+}
+
+.btn {	 	
+ 	color: whitesmoke;
+ 	font-size:18px;
+ 	border-radius: 20px;
+}
+
+.btn-primary {
+ 	background: #C99381;	
+}
+
+.btn-danger {
+	background: rgb(211, 36, 23);
+}
+
+.btn-warning {
+	background: rgb(173, 103, 37)
+}
+/* End of utility classes */
+
+/* Start of the index page */
+#index-page{
 	background-attachment: fixed;
   	background-repeat: no-repeat;
   	background-size: cover;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),url("image/wedding-dress-suit.jpeg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),url("../assets/image/wedding-dress-suit.jpeg");
 	overflow: hidden;
 }
 
-.login-wrapper{
+.form-wrapper{
 	width : 320px;
 	height :420px;
 	background: transparent;
@@ -23,21 +56,16 @@ body{
 	padding: 70px 30px;
 }
 
-.login-wrapper p{
-	margin :0;
-	padding : 0;
-	font-weight: bold;
-}
-
-::placeholder{
+::placeholder, label{
 	color:#C99381;
 }
- .login-wrapper input{
+
+ .form-wrapper input{
  	width: 100%;
  	margin-bottom: 20px;
  }
 
- .login-wrapper input[type="text"], input[type="password"]{
+ .form-wrapper input[type="text"], input[type="password"], input[type="email"]{
  	border: none;
  	border-bottom: 1px solid #fff;
  	background: transparent;
@@ -47,7 +75,7 @@ body{
  	font-size:16px;
  }
 
- .login-wrapper input[type="submit"]{
+ .form-wrapper input[type="submit"]{
  	border:none;
  	outline:none;
  	height:40px;
@@ -57,19 +85,19 @@ body{
  	border-radius: 20px;
  }
 
-.login-wrapper input[type = "submit"]:hover, #btn-signUp:hover{
+.form-wrapper input[type = "submit"]:hover, .btn:hover{
 	cursor: pointer;
 	background: #854A36;
 }
 
-.login-wrapper a {
+.form-wrapper a {
 	text-decoration: none;
 	font-size:110%;
 	color:#C99381;
 	padding-left: 40px;
 }
 
-.login-wrapper a:hover{
+.form-wrapper a:hover{
 	color: #F3CBBD;
 }
 
@@ -82,24 +110,20 @@ body{
 	left: calc(50% - 50px);
 }
 
-
-#login-title{
-	margin : 0;
-	padding: 0 0 20px;
-	text-align: center;
-	font-size: 22px;
-}
-
-#btn-signUp {
+#btn-signUp, #btn-login {
 	float: right;
 	margin-top: 15px;
 	margin-right: 20px;
  	border:none;
  	outline:none;
  	width: 150px;
- 	height:40px;
- 	background: #C99381;
- 	color: whitesmoke;
- 	font-size:18px ;
- 	border-radius: 20px;
+ 	height:40px; 	
  }
+
+ /* Start of the account-setup page */
+ #header {
+	 font-family: 'Kaushan Script', cursive;
+	 color: #C99381;
+	 font-size: 200%;
+	 text-align: center;
+	}
