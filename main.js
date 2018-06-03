@@ -22,21 +22,53 @@ function main() {
 
     //Switch to sign up form
     $("#btn-signUp").click(function () {
-       $("title").html("SIGN UP | WEDDING WIRE");
-       $("#login").hide();
-       $("#btn-signUp").hide();
-       $("#btn-login").show();
-       $("#signup").show(); 
-    }); 
+        window.location.href = "signup.html";
+    });
+
     //Switch to login form
     $("#btn-login").click(function () {
-        $("title").html("LOGIN | WEDDING WIRE");
-        $("#signup").hide();
-        $("#btn-login").hide();
-        $("#btn-signUp").show();
-        $("#login").show();
-    }); 
+        window.location.href = "login.html";
+    });
+
+    // Adding a slider to the home page
+    $('#slider').vegas({
+        overlay: false,
+        transition: ['slideLeft','slideLeft2','slideRight','zoomOut'],
+        transitionDuration: 'auto',
+        delay: 5000,
+        animation: 'random',
+        animationDuration: 'auto',
+        timer: false,
+        shuffle: true,
+        slides: [
+            { src: 'assets/image/slider/bride-groom-forehead-kiss.jpg' },
+            { src: 'assets/image/slider/bride-groom-shoes.jpg' },
+            { src: 'assets/image/slider/bride-sitted.jpg' },
+            { src: 'assets/image/slider/dancing-party.jpg' },
+            { src: 'assets/image/slider/dining-setting.jpg' },
+            { src: 'assets/image/slider/groom-bowtie.jpg' },
+            { src: 'assets/image/slider/groomsman-suits.jpg' },
+            { src: 'assets/image/slider/just-married-golfcart.jpg'}
+        ]
+    });
+
+    //Animation on the nav items
+    $("nav").children().addClass("animated flipInX pulse");
+
+    
+    //Pull down effect
+    var mainContent_offset = $("#main-content").offset();
+    $("#down-arrow").click( ()=>{
+        $("html, body").animate({
+            scrollTop: mainContent_offset.top+20
+        }, "slow");
+    });
+
+    //Adding some space to the social icons
+    $("#social-icons").children().css({
+        "margin-right" : "10px"
+    });     
+    
 }
 
 $(document).ready(main);
-
