@@ -48,7 +48,11 @@ function main() {
             { src: 'assets/image/slider/dining-setting.jpg' },
             { src: 'assets/image/slider/groom-bowtie.jpg' },
             { src: 'assets/image/slider/groomsman-suits.jpg' },
-            { src: 'assets/image/slider/just-married-golfcart.jpg'}
+            { src: 'assets/image/slider/just-married-golfcart.jpg' },
+            { src: 'assets/image/slider/retro-rolls.jpg' },
+            { src: 'assets/image/slider/beachfront.jpg' },
+            { src: 'assets/image/slider/church-aisle.jpg' },
+            { src: 'assets/image/slider/table-setting.jpg'}
         ]
     });
 
