@@ -211,8 +211,8 @@ a{
 }
 
 #btn-signUp, #btn-login {
-	float: right;
-	margin-top: 15px;
+	margin-left: auto;
+	margin-top: 25px;
 	margin-right: 20px;
  	border:none;
  	outline:none;
@@ -288,11 +288,13 @@ nav #login-signup :nth-child(n){
 	font-size: 60%;
 	margin-left: 25px;
 	font-weight: 800;
-	color: #F3CBBD;
 	border: 3px dotted #F3CBBD;
 	padding: 15px;
 	cursor: pointer;
 	position: relative;
+}
+#title a{
+	color: #F3CBBD;	
 }
 
 #cover {
@@ -367,7 +369,7 @@ nav #login-signup :nth-child(n){
 }
 
 .card-description {
-	font-size: 80%;
+	font-size: 70%;
 }
 
 #theCloser{
