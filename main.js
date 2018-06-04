@@ -36,6 +36,28 @@ function main() {
         $("#btn-signUp").show();
         $("#login").show();
     }); 
+
+
+     $("#btn-next1").click(function () {
+        $("title").html("WEDDING WIRE");
+        $("#form-wrapper2").css("visibility", "hidden");
+        $("#form-wrapper3").css("visibility", "hidden");
+        
+    }); 
+
+     $("#btn-next2").click(function () {
+        $("title").html("WEDDING WIRE");
+        $("#form-wrapper1").css("visibility", "hidden");
+        $("#form-wrapper3").css("visibility", "hidden");
+    });
+      $("#btn-next3").click(function () {
+        $("title").html("WEDDING WIRE");
+        $("#form-wrapper1").css("visibility", "hidden");
+        $("#form-wrapper2").css("visibility", "hidden");
+    });
+$("#container").progressbar({ value: 50 });
+
+
 }
 
 $(document).ready(main);

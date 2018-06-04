@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WEDDING WIRE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <script src="lib/jquery.js"></script>
+    <script src="main.js"></script>
+</head>
+<body id="index-page2">
+    <section id="header">
+        <h1>WEDDING WIRE</h1>
+    </section>
+    <hr>
+     
+<div id="Font">
+        <h2 >Step2/3:Input your details.</h2>
+
+    
+   <div id="progress2">
+  <div id="myBar2"></div>
+</div>
+<br><br>
+
+
+    
+<form id="form-wrapper2">
+   When did you and your partner meet:<br>
+        <input type="date" name="date" placeholder="Firtsname" class="date">
+</form>
+
+
+
+
+
+    <div class="wrapper">       
+       <a href="account-setup3.html" /><button  onclick="move2()" id="btn-signUp" class="btn btn-primary btn-position">NEXT</button></a>
+       
+    </div>
+
+
+    <script language="javascript" type="text/javascript">
+  function move2() {
+  var elem = document.getElementById("myBar2");   
+  var width = 5;
+  var id = setInterval(frame, 50);
+  function frame() {
+    if (width >= 50) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+</script>
+</body>
+</html>

@@ -7,22 +7,65 @@
     <script src="lib/jquery.js"></script>
     <script src="main.js"></script>
 </head>
-<body>
+<body id="index-page2">
     <section id="header">
         <h1>WEDDING WIRE</h1>
     </section>
-    <section id="introduce">
+    <hr>
+     
+<div id="Font">
+        <h2 >Step1/3:Input your details.</h2>
 
-    </section>
-    <section id="engagement">
-
-    </section>
-    <section id="wedding-date">
-
-    </section>
-    <section id="budget">
-
-    </section>
     
+   <div id="progress1">
+  <div id="myBar1"></div>
+</div>
+<br><br>
+
+<form id="form-wrapper1">
+    Congradulation to:
+        <input type="text" name="Firstname" placeholder="Firtsname">
+        <input type="text" name="Firstname" placeholder="Secondname">
+        <select name="partners" class="option-edit" >
+            <option value="Bride"><h3 id="option">Bride</h3></option>
+            <option value="Groom"><h3 id="option">Bride Groom</h3></option>
+             </select>
+        <br><br>
+        And:
+        
+         <input type="text" name="firstName" placeholder="Fiancees first Name">
+        <input type="text" name="secondName" placeholder="Fiancees second Name">
+
+        <select name="partners"  class="option-edit">
+            <option type="text" value="Bride"><h3 id="option">Bride</h3></option>
+            <option type="text" value="Groom"><h3 id="option">Bride Groom</h3></option>
+             </select>
+             <div id="bottom-comment">
+        We are happy to start planning with you.
+    </div>
+
+    </form>
+
+    <div class="wrapper">       
+       <a href="account-setup2.html" > <button  onclick="move()" id="btn-signUp" class="btn btn-primary btn-position">NEXT</button></a>
+       
+    </div>
+   
+
+    <script language="javascript" type="text/javascript">
+  function move() {
+  var elem = document.getElementById("myBar1");   
+  var width = 5;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 10) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+</script>
 </body>
 </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WEDDING WIRE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <script src="lib/jquery.js"></script>
+    <script src="main.js"></script>
+</head>
+<body id="index-page2">
+    <section id="header">
+        <h1>WEDDING WIRE</h1>
+    </section>
+    <hr>
+     
+<div id="Font">
+        <h2 >Step3/3:Input your details.</h2>
+
+    
+   <div id="progress">
+  <div id="myBar"></div>
+</div>
+<br><br>
+
+
+<form id="form-wrapper3"  >
+  <h2> Do you have a venue in mind:</h2><br><br>
+       <input type="radio" value ="yes">Yes we have alreadybooked a place.<br><br>
+        <input type="radio" value ="No">No we are still exploring options.<br>
+</form>
+
+
+    <div class="wrapper">       
+      <button  onclick="move()" id="btn-signUp" class="btn btn-primary btn-position">NEXT</button>
+       
+    </div>
+
+
+    <script language="javascript" type="text/javascript">
+  function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 70;
+  var id = setInterval(frame, 100);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+</script>
+</body>
+</html>
