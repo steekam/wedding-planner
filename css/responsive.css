@@ -1,0 +1,15 @@
+/* /Large devices (desktops, 992px and up) */
+@media (max-width: 1200px) { 
+    .cool-box{
+        width: fit-content;
+        margin-bottom: 5px;
+    }
+
+    #myNavBar{
+        padding-left: 30px;
+        padding-bottom: 20px;
+        padding-top: 10px;
+        width: 100%;
+        background-color:#A76B57; 
+    }
+}
