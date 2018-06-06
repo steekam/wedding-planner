@@ -2,8 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
 
 
-html {
+html,body {
 	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
 /* 
@@ -15,36 +17,114 @@ html {
 	display: none;
 }
 
-.btn {	 	
+a {
+	text-decoration: none;
+}
+	/* 
+		Buttons 
+	*/
+
+.mybtn {	 	
  	color: whitesmoke;
- 	font-size:18px;
- 	border-radius: 20px;
+ 	font-size:15px;
+	border-radius: 5px;
+	border:none;
+	outline:none;
+	width: 150px;
+	height: 40px;
+
 }
 
-.btn-primary {
+.mybtn-primary {
  	background: #C99381;	
 }
 
-.btn-danger {
-	background: rgb(211, 36, 23);
+.mybtn-outline-primary {
+	border-color: #C99381;
+	background: white;
+	color: #C99381;
 }
 
-.btn-warning {
-	background: rgb(173, 103, 37)
+.mybtn-outline-primary:hover{
+	background: #854A36;
+	color: whitesmoke;
+}
+
+.mybtn-primary:hover{
+	cursor: pointer;
+	background: #854A36;
+}
+
+.cool-box {	
+	position: relative;		
+	font-size: 55%;
+	margin-right: 20px;
+	padding: 10px;
+	color: #F3CBBD;	
+	font-weight: bold;	
+	border: 2px solid #F3CBBD;			
+}
+
+.cool-box:hover{
+	cursor: pointer;
+	color: whitesmoke; 
+	border: 2px solid rgba(0,160,80,0);
+}
+
+.cool-box::before, .cool-box::after {
+	width: 100%;
+	height:100%;
+	z-index: 3;
+	content:'';
+	position: absolute;
+	top:0;
+	left:0;
+	box-sizing: border-box;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	transition: 0.5s;
+}
+
+.cool-box::before {		
+	border-bottom: 2px solid #FFF;
+	border-left: 0;
+	-webkit-transform-origin: 0% 100%;
+	transform-origin: 0% 100%;
+}
+
+.cool-box::after {
+  	border-top: 0;
+  	border-right: 0;
+  	-webkit-transform-origin: 50% 50%;
+  	transform-origin: 50% 50%;
+}
+
+.cool-box:hover::after, .cool-box:hover::before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.center {
+	margin: 0 auto;
+	text-align: center;
 }
 /* End of utility classes */
 
 /* Start of the index page */
-#index-page{
+#signup-page, #login-page{
+	overflow-x: hidden;
 	background-attachment: fixed;
   	background-repeat: no-repeat;
   	background-size: cover;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),url("../assets/image/wedding-dress-suit.jpeg");
-	overflow: hidden;
+}
+
+#main-wrapper{
+	padding: 0;
 }
 
 .form-wrapper{
-	width : 320px;
+	width : 340px;
 	height :420px;
 	background: transparent;
 	color: #F3CBBD;
@@ -63,6 +143,11 @@ html {
  .form-wrapper input{
  	width: 100%;
  	margin-bottom: 20px;
+ }
+
+ .form-wrapper input[type="checkbox"]{
+	 width: fit-content;
+ 
  }
 
  .form-wrapper input[type="text"], input[type="password"], input[type="email"]{
@@ -85,11 +170,6 @@ html {
  	border-radius: 20px;
  }
 
-.form-wrapper input[type = "submit"]:hover, .btn:hover{
-	cursor: pointer;
-	background: #854A36;
-}
-
 .form-wrapper a {
 	text-decoration: none;
 	font-size:110%;
@@ -111,8 +191,8 @@ html {
 }
 
 #btn-signUp, #btn-login {
-	float: right;
-	margin-top: 15px;
+	margin-left: auto;
+	margin-top: 25px;
 	margin-right: 20px;
  	border:none;
  	outline:none;
@@ -120,10 +200,367 @@ html {
  	height:40px; 	
  }
 
- /* Start of the account-setup page */
+ /* 
+	 Start of the account-setup page
+ */
  #header {
 	 font-family: 'Kaushan Script', cursive;
-	 color: #C99381;
+	 color:whitesmoke;
 	 font-size: 200%;
 	 text-align: center;
-	}
+	 cursor: pointer;	 
+}
+
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/* basic reset */
+
+#accbody {
+    /* height: 100%; */
+    background: rgb(204, 164, 152); /*fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #C99381, #854A36); /* Chrome 10-25, Safari 5.1-6 */
+    font-family: montserrat, arial, verdana;
+	
+}
+
+/*form styles*/
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+
+    /*stacking fieldsets above each other*/
+    position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+/*inputs*/
+#msform input, #msform textarea{
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 250px;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 20px;
+}
+
+#msform input[type='checkbox']{
+    width: fit-content;
+    float: left;
+}
+
+#msform select {
+    border: none;
+    /* border-bottom: 1px solid #ccc; */
+    color: #854B36;
+    padding: 15px;
+    background: transparent;    
+}
+
+#msform input:focus, #msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #C99381;
+    outline-width: 0;
+    transition: All 0.5s ease-in;
+    -webkit-transition: All 0.5s ease-in;
+    -moz-transition: All 0.5s ease-in;
+    -o-transition: All 0.5s ease-in;
+}
+
+/*buttons*/
+#msform .action-button {
+    width: 100px;
+    background: #C99381;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button:hover, #msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #C99381;
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #C5C5F1;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button-previous:hover, #msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #C5C5F1;
+}
+
+/*headings*/
+.fs-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* The descriptive text */
+#msform .descriptive-text{
+    font-size: 18px;
+}
+
+/*progressbar*/
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+}
+
+#progressbar li {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 25%;
+    float: left;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 24px;
+    height: 24px;
+    line-height: 26px;
+    display: block;
+    font-size: 12px;
+    color: #333;
+    background: white;
+    border-radius: 25px;
+    margin: 0 auto 10px auto;
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1; /*put it behind the numbers*/
+}
+
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+    background: #C99381;
+    color: white;
+}
+
+
+/*
+	Start of the home/index page
+*/
+#home-body {
+	font-size: 150%;
+	overflow-x: hidden;
+}
+
+.top {
+	padding: 5px;
+	cursor: pointer;
+	background-color: #854A36;
+	position: fixed;
+	top:90%;
+	left: 95%;
+	z-index: 1;
+}
+
+#main-nav {
+	width: 100%;		
+	color: whitesmoke;
+	height: 70px;
+	position: fixed;
+	top:0;
+	left:0;
+}
+
+nav #login-signup {
+	margin-left: auto;
+	padding-right: 20px; 
+}
+
+nav #login-signup :nth-child(n){
+	text-decoration: none;
+	width: 80px;
+	height: 40px;
+	font-size: 68%;
+	font-weight: bold;
+}
+
+.bg-change{
+	background-color: #A76B57;
+	transition: .5s;
+	opacity:0.9;
+}
+
+#bars {
+	/* opacity: 0.5; */
+	background: linear-gradient(0,0,0.5);
+	padding: 10px;
+}
+#bars > i {
+	transform: scale(2);
+}
+
+#title {
+	height: 56px;
+	margin-left: 25px;
+	font-weight: 800;
+	border: 3px dotted #F3CBBD;
+	padding: 10px;
+	cursor: pointer;
+	position: relative;
+}
+
+#title a{
+	color: #F3CBBD;	
+	margin-bottom: 10px;
+	text-decoration: none;
+	font-size: 80%;
+	
+}
+
+#cover {
+	height: 100vh;
+	background-attachment: fixed;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url("../assets/image/cover-checklist.jpg");
+	transform-origin: 50% 100%;
+}
+
+ #cover-content {
+	 color: whitesmoke;
+	 position: absolute;
+	 top:50%;
+	 left:50%;
+	 transform: translate(-50%,-50%);
+ }
+
+ .v-center {	
+	text-align: center;
+ } 
+
+ .divide {
+	 margin: 20px auto;
+	 width: 160px;
+	 border: 1px solid #F3CBBD;
+ }
+ 
+ #main-content {	
+	 text-align: center;
+	 width: 100%;
+	 
+ }
+
+ .services-wrapper, .slider-wrapper{
+	 padding: 100px 0;
+ }
+
+ .section-title{
+	 margin-top: 0;
+	 font-size: 83%;
+	 font-weight: 100;
+ }
+
+ .tools-row{
+	width: 76%; 
+	padding-top:50px;
+ }
+
+ .mycard {
+	border: none;
+	margin-bottom: 25px;
+}
+
+.card-title {
+	font-size: 82%;
+	margin: 10px 0;
+}
+
+.card-text {
+	font-size: 85%;
+}
+
+#theCloser{
+	padding-top: 50px;
+}
+
+#closerTagline{
+	font-size: 75%;
+	width: 35%;
+	margin-bottom: 25px;
+}
+
+#slider{
+	height: 95vh;
+	width: 100%;
+	margin-top: 80px;
+}
+
+footer{
+	padding: 30px 0;
+}
+
+#social-icons {
+	padding-top: 30px;
+	width: fit-content;
+}
+
+#copyright{
+	margin-top: 10px;
+}
