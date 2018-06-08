@@ -67,7 +67,7 @@ function signUpPage(){
     });
 
     if ($('.alert-success').isInViewport()) {
-        setTimeout(moveToSetup(), 10000);
+        setTimeout(moveToSetup(), 60000);
     }
 }
 

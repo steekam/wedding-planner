@@ -91,7 +91,7 @@
 		   	<div class="ml-5">
 				<input class="form-check-input" type="checkbox" name="stay" value="yes"><p>Remember me</p>
 			</div>
-			<a href ="#" >Forgot your password?</a><br>			
+			<a href ="emailResetpassword.php" >Forgot your password?</a><br>			
 		</form>		
 	</div>
 

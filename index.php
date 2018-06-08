@@ -79,7 +79,7 @@
            <hr class="divide">
 
            <div class="row px-5">
-                <div class="mycard card col-md-4">
+                <div class="card col-md-4">
                     <center>
                         <div class="card-image"><img src="assets/image/icons/checklist.png" alt="checklist"></div>
                     </center>
@@ -89,7 +89,7 @@
                     </div>                    
                 </div>  
                 
-                <div class="mycard card col-md-4">
+                <div class="card col-md-4">
                     <center>
                         <div class="card-image"><img src="assets/image/icons/money.png" alt="budgeter"></div>
                     </center>
@@ -99,7 +99,7 @@
                     </div>                    
                 </div>
 
-                <div class="mycard card col-md-4">
+                <div class="card col-md-4">
                     <center>
                         <div class="card-image"><img src="assets/image/icons/wedding-rings.png" alt="wedding vision"></div>
                     </center>
@@ -112,7 +112,7 @@
             </div>
 
             <div class="row px-5">
-                <div class="mycard card col-md-4">
+                <div class="card col-md-4">
                     <center>
                         <div class="card-image"><img src="assets/image/icons/gift.png" alt="Registry"></div>
                     </center>
@@ -122,7 +122,7 @@
                     </div>                    
                 </div>
 
-                <div class="mycard card col-md-4">
+                <div class="card col-md-4">
                     <center>
                         <div class="card-image"><img src="assets/image/icons/message.png" alt="Guest list"></div>
                     </center>
@@ -132,7 +132,7 @@
                     </div>                    
                 </div>
 
-                <div class="mycard card col-md-4">
+                <div class="card col-md-4">
                     <center>
                         <div class="card-image"><img src="assets/image/icons/clock.png" alt="timeline"></div>
                     </center>

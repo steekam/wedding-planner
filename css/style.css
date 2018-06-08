@@ -199,6 +199,19 @@ a {
  	width: 150px;
  	height:40px; 	
  }
+ /* *
+ 	Reset password page
+ */
+ .resetBody{
+	background: #2C3E50;
+ }
+
+ #resetPasswordContainer {
+    text-align: center;
+    width: 420px;
+    margin-top: 90px;
+    color:whitesmoke;
+}
 
  /* 
 	 Start of the account-setup page

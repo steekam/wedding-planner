@@ -69,7 +69,7 @@ session_start();
                 
                                             
                 Please click this link to activate your account:
-                http://localhost/~steekam/Secret-diary/verifyemail.php?email='.$email.'&hash='.$password_hash.'';
+                http://localhost/~steekam/wedding-planner/steekam-patch-1/verifyemail.php?email='.$email.'&hash='.$password_hash.'';
                 
                     
                 
