@@ -77,6 +77,7 @@ session_start();
                     $error = '<p>Verifiation email could not be sent Try again later</p>';                                
                     
                 } else {
+                    
                     $alert="<p>An activation link for your account has been sent to your email address for verifiation.<br>You won't be able to login without the activation</p>";
                 }                
             }

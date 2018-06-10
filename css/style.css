@@ -276,11 +276,6 @@ a {
     font-size: 20px;
 }
 
-#msform input[type='checkbox']{
-    width: fit-content;
-    float: left;
-}
-
 #msform select {
     border: none;
     /* border-bottom: 1px solid #ccc; */
@@ -412,7 +407,9 @@ a {
     background: #C99381;
     color: white;
 }
-
+.empty-warning {
+	 border: 1px solid red !important;
+}
 
 /*
 	Start of the home/index page

@@ -16,8 +16,8 @@
 
     <!--Bootstrap  CSS and surporting js libs -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="lib/bootstrap.min.js"></script>
     <script src="lib/popper.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
 
     <!-- Font-awesome -->
     <script src="lib/fontawesome.js"></script>
