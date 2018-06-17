@@ -1,7 +1,11 @@
 <?php
     session_start();  
 
-    if (array_key_exists("id", $_COOKIE) OR array_key_exists("id",$_SESSION)) {
+    if (array_key_exists("id", $_COOKIE) AND isset($_COOKIE['id']) ){
+      $_SESSION['id'] = $_COOKIE['id'];
+    }
+
+    if (array_key_exists("id",$_SESSION) AND isset($_SESSION['id'])) {
         include("connect.php");
 
         $username = "";
@@ -84,7 +88,14 @@
                 </ul>
               </div>           
             </div>
-            <!-- /sidebar menu -->            
+            <!-- /sidebar menu -->
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">              
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="index.php?logout=1">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->           
           </div>
         </div>
 

@@ -39,7 +39,7 @@ function main() {
         window.location.href = "login.php";
     });
 
-    if (current_page == "index.php") {
+    if (current_page.includes("index.php") ) {
         theIndexPage();
     }else if (current_page == "account-setup.php") {
         theaccountSetup();
