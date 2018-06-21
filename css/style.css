@@ -534,16 +534,16 @@ nav #login-signup :nth-child(n){
 
  .mycard {
 	border: none;
-	margin-bottom: 25px;
+	margin-bottom: 45px;
 }
 
 .card-title {
-	font-size: 82%;
+	font-size: 80%;
 	margin: 10px 0;
 }
 
 .card-text {
-	font-size: 85%;
+	font-size: 80%;
 }
 
 #theCloser{
