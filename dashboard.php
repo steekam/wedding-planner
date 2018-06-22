@@ -135,7 +135,49 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-        
+        <div class="right_col" role="main">
+          <div class="row">
+            <!-- Wedding details tile -->
+            <div class="col-md-6">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Your Wedding Details</h2>
+
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                      <button class="btn btn-info"><a  style="color: white;" href="account/settings/profile.php">Update</a></button>
+                    </li>                  
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+
+                <div class="x_content">
+
+                </div>
+
+              </div>
+            </div>
+            <!-- End of wedding details tile -->
+            <!-- Planning progress tile -->
+            <div class="col-md-6">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Planning progress</h2>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <div class="row">
+                    <!-- <div class="col-md-4"> -->
+                      <p>Alternate design</p>
+                      <input class="knob" data-width="60" data-height="120" data-displayPrevious=false data-displayInput=false data-fgColor="#7D4329" data-skin="tron" data-thickness=".3" value="80">
+                    <!-- </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
         <!-- /page content -->
 
         
@@ -150,6 +192,10 @@
     <script src="lib/gentella/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="lib/gentella/vendors/nprogress/nprogress.js"></script>
+    <!-- jQuery Knob -->
+    <script src="lib/gentella/vendors/jquery-knob/dist/jquery.knob.min.js"></script>
+    <!-- Cropper -->
+    <!-- <script src="lib/gentella/vendors/cropper/dist/cropper.min.js"></script> -->
     
     <!-- Custom Theme Scripts -->
     <script src="lib/gentella//build/js/custom.min.js"></script>
