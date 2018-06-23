@@ -1,3 +1,33 @@
-/* Profile page */
+/* 
+    The dashboard page
+*/
+.theProgress{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px dashed rgb(172, 84, 84);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5px;
+}
 
-/* End of profile page */
+.progress-card{
+    padding: 25px 20px;
+    border-bottom: 1px solid rgb(156, 105, 105);
+}
+
+#budget_used{
+    font-size: 130%
+}
+
+sup {
+    font-size: 9px;
+}
+
+.pg_description{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 155%;
+}

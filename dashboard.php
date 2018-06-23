@@ -74,17 +74,29 @@
                       <a><i class="fa fa-user-plus"></i> Guest list </a>
                   </li>
                   <li>
-                      <a><i class="fa fa-gift center"></i> Registry </a>
-                  </li>
-                  <li>
-                      <a><i class="fa fa-desktop"></i> Wedding Website </a>
-                  </li>
-                  <li>
-                      <a><i class="fa fa-truck"></i> Vendors </a>
-                  </li>
-                  <li>
                       <a><i class="fa fa-clock-o"></i> Wedding Day Timeline </a>
                   </li>
+                  <li>
+                      <a>
+                        <i class="fa fa-gift center"></i>
+                        <span>Registry</span> 
+                        <span class="label label-success pull-right">ComingSoon</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a>
+                        <i class="fa fa-desktop"></i> 
+                        <span>Wedding Website</span> 
+                        <span class="label label-success pull-right">ComingSoon</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a>
+                        <i class="fa fa-truck"></i> 
+                        <span>Vendors</span>
+                        <span class="label label-success pull-right">ComingSoon</span>
+                      </a>
+                  </li>                  
                 </ul>
               </div>           
             </div>
@@ -138,7 +150,7 @@
         <div class="right_col" role="main">
           <div class="row">
             <!-- Wedding details tile -->
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="x_panel">
                 <div class="x_title">
                   <h2>Your Wedding Details</h2>
@@ -159,19 +171,50 @@
             </div>
             <!-- End of wedding details tile -->
             <!-- Planning progress tile -->
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="x_panel">
                 <div class="x_title">
                   <h2>Planning progress</h2>
                   <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
-                  <div class="row">
-                    <!-- <div class="col-md-4"> -->
-                      <p>Alternate design</p>
-                      <input class="knob" data-width="60" data-height="120" data-displayPrevious=false data-displayInput=false data-fgColor="#7D4329" data-skin="tron" data-thickness=".3" value="80">
-                    <!-- </div> -->
+                  <div class="row progress-card">
+                    <div class="theProgress col-md-5">
+                      <div class="progress_content">
+                        <span id="budget_used"><sup>ksh</sup>3,000 </span><br>
+                        <small id="user_budget">of <b>800K</b></small>
+                      </div>
+                    </div>
+
+                    <div class="pg_description col-md-7">
+                      Budgeter
+                    </div>
                   </div>
+
+                  <div class="row progress-card">
+                    <div class="theProgress col-md-5">
+                      <div class="progress_content">
+                        30% <br>completed
+                      </div>
+                    </div>
+
+                    <div class="pg_description col-md-7">
+                      Checklist
+                    </div>
+                  </div>
+
+                  <div class="row progress-card">
+                    <div class="theProgress col-md-5">
+                      <div class="progress_content">
+                        100 <br>invited
+                      </div>
+                    </div>
+
+                    <div class="pg_description col-md-7">
+                      Guests
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>

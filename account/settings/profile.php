@@ -70,17 +70,29 @@ error_reporting(E_ALL);
                       <a><i class="fa fa-user-plus"></i> Guest list </a>
                   </li>
                   <li>
-                      <a><i class="fa fa-gift center"></i> Registry </a>
-                  </li>
-                  <li>
-                      <a><i class="fa fa-desktop"></i> Wedding Website </a>
-                  </li>
-                  <li>
-                      <a><i class="fa fa-truck"></i> Vendors </a>
-                  </li>
-                  <li>
                       <a><i class="fa fa-clock-o"></i> Wedding Day Timeline </a>
                   </li>
+                  <li>
+                      <a>
+                        <i class="fa fa-gift center"></i>
+                        <span>Registry</span> 
+                        <span class="label label-success pull-right">ComingSoon</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a>
+                        <i class="fa fa-desktop"></i> 
+                        <span>Wedding Website</span> 
+                        <span class="label label-success pull-right">ComingSoon</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a>
+                        <i class="fa fa-truck"></i> 
+                        <span>Vendors</span>
+                        <span class="label label-success pull-right">ComingSoon</span>
+                      </a>
+                  </li>                  
                 </ul>
               </div>           
             </div>
