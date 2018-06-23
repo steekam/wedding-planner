@@ -1,7 +1,11 @@
 <?php
     session_start();  
 
-    if (array_key_exists("id", $_COOKIE) OR array_key_exists("id",$_SESSION)) {
+    if (array_key_exists("id", $_COOKIE) AND isset($_COOKIE['id']) ){
+      $_SESSION['id'] = $_COOKIE['id'];
+    }
+
+    if (array_key_exists("id",$_SESSION) AND isset($_SESSION['id'])) {
         include("connect.php");
 
         $username = "";
@@ -58,7 +62,7 @@
               <div class="menu_section">
               <ul class="nav side-menu">
                   <li class="active">
-                      <a><i class="fa fa-home"></i> Dashboard </a>                    
+                      <a href="#"><i class="fa fa-home"></i> Dashboard </a>                    
                   </li>
                   <li>
                       <a><i class="fa fa-check-circle-o"></i> Checklist </a>                    
@@ -70,21 +74,40 @@
                       <a><i class="fa fa-user-plus"></i> Guest list </a>
                   </li>
                   <li>
-                      <a><i class="fa fa-gift center"></i> Registry </a>
-                  </li>
-                  <li>
-                      <a><i class="fa fa-desktop"></i> Wedding Website </a>
-                  </li>
-                  <li>
-                      <a><i class="fa fa-truck"></i> Vendors </a>
-                  </li>
-                  <li>
                       <a><i class="fa fa-clock-o"></i> Wedding Day Timeline </a>
                   </li>
+                  <li>
+                      <a>
+                        <i class="fa fa-gift center"></i>
+                        <span>Registry</span> 
+                        <span class="label label-success pull-right">ComingSoon</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a>
+                        <i class="fa fa-desktop"></i> 
+                        <span>Wedding Website</span> 
+                        <span class="label label-success pull-right">ComingSoon</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a>
+                        <i class="fa fa-truck"></i> 
+                        <span>Vendors</span>
+                        <span class="label label-success pull-right">ComingSoon</span>
+                      </a>
+                  </li>                  
                 </ul>
               </div>           
             </div>
-            <!-- /sidebar menu -->            
+            <!-- /sidebar menu -->
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">              
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="index.php?logout=1">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->           
           </div>
         </div>
 
@@ -125,29 +148,78 @@
 
         <!-- page content -->
         <div class="right_col" role="main">
-          <div class="">
-            <div class="page-title">
-              <div class="title_left">
-                <h3>Welcome to the beginning</h3>
-              </div>
+          <div class="row">
+            <!-- Wedding details tile -->
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Your Wedding Details</h2>
 
-              <div class="title_right">
-                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Go!</button>
-                    </span>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                      <button class="btn btn-info"><a  style="color: white;" href="account/settings/profile.php">Update</a></button>
+                    </li>                  
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+
+                <div class="x_content">
+
+                </div>
+
+              </div>
+            </div>
+            <!-- End of wedding details tile -->
+            <!-- Planning progress tile -->
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Planning progress</h2>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <div class="row progress-card">
+                    <div class="theProgress col-md-5">
+                      <div class="progress_content">
+                        <span id="budget_used"><sup>ksh</sup>3,000 </span><br>
+                        <small id="user_budget">of <b>800K</b></small>
+                      </div>
+                    </div>
+
+                    <div class="pg_description col-md-7">
+                      Budgeter
+                    </div>
                   </div>
+
+                  <div class="row progress-card">
+                    <div class="theProgress col-md-5">
+                      <div class="progress_content">
+                        30% <br>completed
+                      </div>
+                    </div>
+
+                    <div class="pg_description col-md-7">
+                      Checklist
+                    </div>
+                  </div>
+
+                  <div class="row progress-card">
+                    <div class="theProgress col-md-5">
+                      <div class="progress_content">
+                        100 <br>invited
+                      </div>
+                    </div>
+
+                    <div class="pg_description col-md-7">
+                      Guests
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="clearfix"></div>
-
-            <div class="row">
-              
-            </div>
         </div>
         <!-- /page content -->
 
@@ -163,6 +235,10 @@
     <script src="lib/gentella/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="lib/gentella/vendors/nprogress/nprogress.js"></script>
+    <!-- jQuery Knob -->
+    <script src="lib/gentella/vendors/jquery-knob/dist/jquery.knob.min.js"></script>
+    <!-- Cropper -->
+    <!-- <script src="lib/gentella/vendors/cropper/dist/cropper.min.js"></script> -->
     
     <!-- Custom Theme Scripts -->
     <script src="lib/gentella//build/js/custom.min.js"></script>

@@ -1,7 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
     session_start();      
     
     if (array_key_exists("id", $_COOKIE) OR array_key_exists("id",$_SESSION)) {
@@ -163,7 +160,7 @@ error_reporting(E_ALL);
                             <option value="">Select</option>
                             <option value="below 200">below 200</option>
                             <option value="200-300">200-300</option>
-                            <option value="400-500">400K-500</option>
+                            <option value="400-500">400-500</option>
                             <option value="above 500">above 500</option>
                         </select>                             
                         <div class="descriptive-text">of your family and friends.</div>
