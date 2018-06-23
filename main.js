@@ -36,6 +36,36 @@ function main() {
 
     //Switch to login form
     $("#btn-login").click(function () {
+<<<<<<< HEAD
+        $("title").html("LOGIN | WEDDING WIRE");
+        $("#signup").hide();
+        $("#btn-login").hide();
+        $("#btn-signUp").show();
+        $("#login").show();
+    }); 
+
+
+     $("#btn-next1").click(function () {
+        $("title").html("WEDDING WIRE");
+        $("#form-wrapper2").css("visibility", "hidden");
+        $("#form-wrapper3").css("visibility", "hidden");
+        
+    }); 
+
+     $("#btn-next2").click(function () {
+        $("title").html("WEDDING WIRE");
+        $("#form-wrapper1").css("visibility", "hidden");
+        $("#form-wrapper3").css("visibility", "hidden");
+    });
+      $("#btn-next3").click(function () {
+        $("title").html("WEDDING WIRE");
+        $("#form-wrapper1").css("visibility", "hidden");
+        $("#form-wrapper2").css("visibility", "hidden");
+    });
+$("#container").progressbar({ value: 50 });
+
+
+=======
         window.location.href = "login.php";
     });
 
@@ -48,6 +78,7 @@ function main() {
     }
     
     
+>>>>>>> steekam-patch-1
 }
 
 function signUpPage(){
