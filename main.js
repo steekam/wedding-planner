@@ -11,13 +11,13 @@ function main() {
     $("input[type = 'text']").attr('autocomplete','off');
 
     //Animation feature for the labels on the forms
-    $("input").on("keyup", function(){
+    $("#signup>input,#login>input").on("keyup", function(){
         $(this).removeAttr("placeholder");
         var label = $("label[for='" + $(this).attr('id') + "']");
         label.slideDown(50);
     });
 
-    $("input").focusout(function () {
+    $("#signup>input,#login>input").focusout(function () {
         var value = $(this).val();
         
         if (!value) {
@@ -39,7 +39,7 @@ function main() {
         window.location.href = "login.php";
     });
 
-    if (current_page == "index.php") {
+    if (current_page.includes("index.php") ) {
         theIndexPage();
     }else if (current_page == "account-setup.php") {
         theaccountSetup();
@@ -65,12 +65,10 @@ function signUpPage(){
             $("#error").html(response);
         }        
     });
-
-    if ($('.alert-success').isInViewport()) {
-        setTimeout(moveToSetup(), 10000);
-    }
+   
 }
 
+//Check if element is in the viewport
 $.fn.isInViewport = function () {
     var elementTop = $(this).offset().top;
     var elementBottom = elementTop + $(this).outerHeight();
@@ -80,11 +78,6 @@ $.fn.isInViewport = function () {
 
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
-
-function moveToSetup(){
-        window.location.href = "account-setup.php";
-    
-}
 
 function passwordMatch(pass1,pass2){
     if (pass1 == pass2) {
@@ -164,19 +157,41 @@ function theaccountSetup(){
         window.location.href = "index.php";
     });
 
+    //Check fields are not empty after focus out
+    var empty_fields = true;    
+    $('fieldset>input[type="text"],input[type="date"]').on('keyup change keypress blur', function () {
+        var current = $(this);
+        if (!current.val()) {
+            empty_fields = true;
+            current.attr('style', 'border:2px solid red;');
+        } else {
+            empty_fields = false;
+            current.removeAttr("style");
+        }
+    });
+    
+    
+
     var current_fs, next_fs, previous_fs; //fieldsets
     var left, opacity, scale; //fieldset properties which we will animate
     var animating; //flag to prevent quick multi-click glitches
 
-    $(".next").click(function () {
-        if (animating) return false;
+     $('#msform').on('click','.next',function () {
+         console.log(empty_fields);
+         
+         //Show warning to users
+         current_fs = $(this).parent();
+         current_fs.find('input[type="text"],input[type="date"]').each(function (index) {
+            if (!$(this).val()) {
+                $(this).attr('style', 'border:2px solid red;');
+            }
+        });
+
+        if (animating || empty_fields) return false;
         animating = true;
 
         current_fs = $(this).parent();
-        next_fs = $(this).parent().next();
-
-        console.log($("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active"));
-
+        next_fs = $(this).parent().next();       
 
         //activate next step on progressbar using the index of next_fs
         $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
@@ -203,11 +218,12 @@ function theaccountSetup(){
             complete: function () {
                 current_fs.hide();
                 animating = false;
+                empty_fields =true;
             }
-            //this comes from the custom easing plugin
-
         });
+          
     });
+    
 
     $(".previous").click(function () {
         if (animating) return false;
@@ -239,12 +255,30 @@ function theaccountSetup(){
                 current_fs.hide();
                 animating = false;
             }
-            // //this comes from the custom easing plugin
-            // easing: 'easeInOutBack'
         });
     });
 
-    $(".submit").click(function () {
-        return false;
-    })
+    $('fieldset>select').on('keyup change keypress blur', function () {
+        var current = $(this).find(':selected');        
+        if (current.text() == "Select") {
+            empty_fields = true;
+            current.parent().attr('style', 'border:2px solid red;');
+        } else {
+            empty_fields = false;
+            current.parent().removeAttr("style");
+        }
+    });
+
+    $("#msform").on('click', '.submit',function () {
+        current_fs = $(this).parent();
+        
+        current_fs.find('select').each(function (index) {
+            var current_select = $(this).find(':selected')
+            if (current_select.text() == "Select") {
+                $(this).attr('style', 'border:2px solid red;');
+                return false;                
+            }
+        });
+    });
+
 }

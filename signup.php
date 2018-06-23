@@ -69,7 +69,7 @@ session_start();
                 
                                             
                 Please click this link to activate your account:
-                http://localhost/~steekam/Secret-diary/verifyemail.php?email='.$email.'&hash='.$password_hash.'';
+                http://localhost/~steekam/wedding-planner/steekam-patch-1/verifyemail.php?email='.$email.'&hash='.$password_hash.'';
                 
                     
                 
@@ -77,6 +77,7 @@ session_start();
                     $error = '<p>Verifiation email could not be sent Try again later</p>';                                
                     
                 } else {
+                    
                     $alert="<p>An activation link for your account has been sent to your email address for verifiation.<br>You won't be able to login without the activation</p>";
                 }                
             }

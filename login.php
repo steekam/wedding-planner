@@ -29,7 +29,7 @@
 		$username = mysqli_real_escape_string($link, $_POST["username"]);
 		$password = mysqli_real_escape_string($link, $_POST["password"]);
 
-		$query = "SELECT `id`,`password` FROM `users` WHERE username = '".$username."' AND active = '1';";
+		$query = "SELECT `id`,`password`, `account_setup` FROM `users` WHERE username = '".$username."' AND active = '1';";
 		$result = mysqli_query($link, $query);
 
 		if (mysqli_num_rows($result) > 0) {
@@ -41,8 +41,13 @@
 					setcookie("id",$row["id"], time() + (86400 * 30), "/" );
 				}
 				$_SESSION["id"] = $row["id"];
-				
-				header("Location: dashboard.php");
+				//The first login to be directed to account setup
+				if($row['account_setup']=="0"){
+					$_SESSION['valid'] = "1";
+					header("Location: account-setup.php");
+				}else{
+					header("Location: dashboard.php");
+				}				
 			}
 			else {
 				$error = "<p>You entered a wrong password.Try again!</p>";
@@ -91,7 +96,7 @@
 		   	<div class="ml-5">
 				<input class="form-check-input" type="checkbox" name="stay" value="yes"><p>Remember me</p>
 			</div>
-			<a href ="#" >Forgot your password?</a><br>			
+			<a href ="emailResetpassword.php" >Forgot your password?</a><br>			
 		</form>		
 	</div>
 

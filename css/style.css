@@ -199,6 +199,19 @@ a {
  	width: 150px;
  	height:40px; 	
  }
+ /* *
+ 	Reset password page
+ */
+ .resetBody{
+	background: #2C3E50;
+ }
+
+ #resetPasswordContainer {
+    text-align: center;
+    width: 420px;
+    margin-top: 90px;
+    color:whitesmoke;
+}
 
  /* 
 	 Start of the account-setup page
@@ -261,11 +274,6 @@ a {
     font-family: montserrat;
     color: #2C3E50;
     font-size: 20px;
-}
-
-#msform input[type='checkbox']{
-    width: fit-content;
-    float: left;
 }
 
 #msform select {
@@ -399,7 +407,9 @@ a {
     background: #C99381;
     color: white;
 }
-
+.empty-warning {
+	 border: 1px solid red !important;
+}
 
 /*
 	Start of the home/index page
@@ -524,16 +534,16 @@ nav #login-signup :nth-child(n){
 
  .mycard {
 	border: none;
-	margin-bottom: 25px;
+	margin-bottom: 45px;
 }
 
 .card-title {
-	font-size: 82%;
+	font-size: 80%;
 	margin: 10px 0;
 }
 
 .card-text {
-	font-size: 85%;
+	font-size: 80%;
 }
 
 #theCloser{
