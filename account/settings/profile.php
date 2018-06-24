@@ -1,7 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
     session_start();  
 
     if (array_key_exists("id", $_COOKIE) OR array_key_exists("id",$_SESSION)) {
@@ -61,7 +58,7 @@ error_reporting(E_ALL);
                       <a href="../../dashboard.php"><i class="fa fa-home"></i> Dashboard </a>                    
                   </li>
                   <li>
-                      <a><i class="fa fa-check-circle-o"></i> Checklist </a>                    
+                      <a href="../checklist/checklist.php"><i class="fa fa-check-circle-o"></i> Checklist </a>                    
                   </li>
                   <li>
                       <a><i class="fa fa-money"></i> Budgeter </a>
@@ -116,12 +113,12 @@ error_reporting(E_ALL);
               </div>
 
                 <ul class="nav navbar-nav navbar-left">
-                  <li></li><a class = "site_title" href="dashboard.php">WEDDING WIRE</a></li>
+                  <li><a class = "site_title" href="dashboard.php">WEDDING WIRE</a></li>
                 </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    ACCOUNT SETTINGS
+                    ACCOUNT
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">

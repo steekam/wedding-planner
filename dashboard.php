@@ -46,7 +46,9 @@
 
     <!-- Custom Theme Style -->
     <link href="lib/gentella/build/css/custom.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/dashboard.css"> 
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/animate.css"> 
+    <link rel="stylesheet" href="css/responsive.css">
     
   </head>
 
@@ -65,7 +67,7 @@
                       <a href="#"><i class="fa fa-home"></i> Dashboard </a>                    
                   </li>
                   <li>
-                      <a><i class="fa fa-check-circle-o"></i> Checklist </a>                    
+                      <a href="account/checklist/checklist.php"><i class="fa fa-check-circle-o"></i> Checklist </a>                    
                   </li>
                   <li>
                       <a><i class="fa fa-money"></i> Budgeter </a>
@@ -120,12 +122,12 @@
               </div>
 
                 <ul class="nav navbar-nav navbar-left">
-                  <li></li><a class = "site_title" href="dashboard.php">WEDDING WIRE</a></li>
+                  <li><a class = "site_title" href="dashboard.php">WEDDING WIRE</a></li>
                 </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    ACCOUNT SETTINGS
+                    ACCOUNT
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -164,7 +166,25 @@
                 </div>
 
                 <div class="x_content">
+                  <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12 wedding-image">
+                      <img src="assets/image/user_cover/beachfront.jpg" alt="">
+                      <form  method="post" enctype="multipart/form-data">
+                        <input type="file" name="cover_image" id="cover_image" style="display: none;">
+                      </form>
+                    </div>
+                  </div>
 
+                  <div class="row" style="margin-top: 30px;">
+                    <div class="sentiment">
+                      <img src="assets/image/icons/wedding.png" alt="">
+                      <span id="user_lastname">Spaniard</span>  &  <span id="partner_lastname">Doubtfire</span>
+                    </div>                
+                  </div>
+                </div>
+                
+                <div class="row sentiment"  style="font-size:17px;">
+                  <i class="fa fa-calendar col-md-1"></i> <div id="wedding_date" class="col-md-6">30/5/18</div>
                 </div>
 
               </div>
@@ -178,42 +198,58 @@
                   <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
-                  <div class="row progress-card">
-                    <div class="theProgress col-md-5">
-                      <div class="progress_content">
-                        <span id="budget_used"><sup>ksh</sup>3,000 </span><br>
-                        <small id="user_budget">of <b>800K</b></small>
+                  <a href="">
+                    <div class="row progress-card">
+                      <div class="theProgress col-md-5 col-xs-5 col-sm-5">
+                        <div class="progress_content">
+                          <span><sup>ksh</sup><span id="used_budget">3,000</span> </span><br>
+                          <small>of <b id="total_budget">800K</b></small>
+                        </div>
+                      </div>
+
+                      <div class="pg_description col-md-7 col-xs-7 col-sm-7">
+                        Budgeter <br>
+                        <div class="pg_byline">
+                          Manage your expesnses and keep your day on the budget
+                        </div>
                       </div>
                     </div>
+                  </a>
 
-                    <div class="pg_description col-md-7">
-                      Budgeter
-                    </div>
-                  </div>
+                  <a href="">
+                    <div class="row progress-card">
+                      <div class="theProgress col-md-5 col-xs-5 col-sm-5">
+                        <div class="progress_content">
+                          <b id=perc_completed"">30%</b> <br>completed
+                        </div>
+                      </div>
 
-                  <div class="row progress-card">
-                    <div class="theProgress col-md-5">
-                      <div class="progress_content">
-                        30% <br>completed
+                      <div class="pg_description col-md-7 col-xs-7 col-sm-7">
+                        Checklist <br>
+                        <div class="pg_byline">
+                          Manage your actvities making sure you don't miss a thing
+                        </div>
                       </div>
                     </div>
+                  </a>
 
-                    <div class="pg_description col-md-7">
-                      Checklist
-                    </div>
-                  </div>
+                  <a href="">
+                    <div class="row progress-card">
+                      <div class="theProgress col-md-5 col-xs-5 col-sm-5">
+                        <div class="progress_content" style="font-size: 80%">
+                          <b id="invited">100</b> <br>invited <br>
+                          <b id="RSVP">20</b>  <br> RSVP
+                        </div>
+                      </div>
 
-                  <div class="row progress-card">
-                    <div class="theProgress col-md-5">
-                      <div class="progress_content">
-                        100 <br>invited
+                      <div class="pg_description col-md-7 col-xs-7 col-sm-7">
+                        Guests <br>
+                        <div class="pg_byline">
+                          Manage your guest lists and RSVPs all in one place
+                        </div>                      
                       </div>
                     </div>
-
-                    <div class="pg_description col-md-7">
-                      Guests
-                    </div>
-                  </div>
+                  </a>
 
                 </div>
               </div>
@@ -242,5 +278,7 @@
     
     <!-- Custom Theme Scripts -->
     <script src="lib/gentella//build/js/custom.min.js"></script>
+    <!-- Local script -->
+    <script src="lib/dashboard.js"></script>
   </body>
 </html>
