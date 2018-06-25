@@ -53,3 +53,242 @@ sup {
     font-size: 135%;
     text-transform: uppercase;
 }
+
+/* \Profile page */
+/* Checklist page */
+
+.label__checkbox {
+  display: none;
+}
+.label__check {
+  border-radius: 50%;
+  border: 5px solid rgba(88, 47, 33, 0.404);
+  background: white;
+  vertical-align: middle;
+  width: 2.5em;
+  height: 2.5em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border .3s ease;
+}
+.label__check i.icon {
+  opacity: 0.8;
+  font-size: 10px;
+  color: rgb(88, 47, 33);
+  transition: opacity .3s .1s ease;
+  -webkit-text-stroke: 3px rgba(0, 0, 0, 0.5);
+}
+.label__check:hover {
+  border: 5px solid rgba(70, 40, 40, 0.2);
+}
+.label__checkbox:checked + .label__text .label__check {
+  -webkit-animation: check 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) forwards;
+          animation: check 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) forwards;
+}
+.label__checkbox:checked + .label__text .label__check .icon {
+  opacity: 1;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  color: white;
+  -webkit-text-stroke: 0;
+  -webkit-animation: icon 0.3s cubic-bezier(1, 0.008, 0.565, 1.65) 0.1s 1 forwards;
+          animation: icon 0.3s cubic-bezier(1, 0.008, 0.565, 1.65) 0.1s 1 forwards;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+@-webkit-keyframes icon {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes icon {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+@-webkit-keyframes check {
+  0% {
+    width: 1.5em;
+    height: 1.5em;
+    border-width: 5px;
+  }
+  10% {
+    width: 1.5em;
+    height: 1.5em;
+    opacity: 0.1;
+    background: rgba(0, 0, 0, 0.2);
+    border-width: 15px;
+  }
+  12% {
+    width: 1.5em;
+    height: 1.5em;
+    opacity: 0.4;
+    background: rgba(0, 0, 0, 0.1);
+    border-width: 0;
+  }
+  50% {
+    width: 2.5em;
+    height: 2.5em;
+    background: rgb(172, 84, 84);
+    border: 0;
+    opacity: 0.6;
+  }
+  100% {
+    width: 2.5em;
+    height: 2.5em;
+    background: rgb(172, 84, 84);
+    border: 0;
+    opacity: 1;
+  }
+}
+@keyframes check {
+  0% {
+    width: 1.5em;
+    height: 1.5em;
+    border-width: 5px;
+  }
+  10% {
+    width: 1.5em;
+    height: 1.5em;
+    opacity: 0.1;
+    background: rgba(0, 0, 0, 0.2);
+    border-width: 15px;
+  }
+  12% {
+    width: 1.5em;
+    height: 1.5em;
+    opacity: 0.4;
+    background: rgba(0, 0, 0, 0.1);
+    border-width: 0;
+  }
+  50% {
+    width: 2.5em;
+    height: 2.5em;
+    background: rgb(172, 84, 84);
+    border: 0;
+    opacity: 0.6;
+  }
+  100% {
+    width: 2.5em;
+    height: 2.5em;
+    background: rgb(172, 84, 84);
+    border: 0;
+    opacity: 1;
+  }
+}
+
+
+.checklist{
+    width: 95%;
+    margin: 0 auto;
+    table-layout: fixed;
+}
+
+
+.task {
+    padding: 8px 0 0 0 ;
+}
+.options{
+  text-align: right;
+  width: 25px;
+  font-size: 145%;
+  padding: 8px;
+  cursor:pointer;
+}
+
+.fixed {
+  position: fixed;
+}
+
+body {
+  position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+.taskDetails {
+    width: 40%;
+    height: 100vh;
+    position: fixed;
+    top: 0; 
+    right: 0;
+    background-color: white;
+    z-index: 11; /* 1px higher than the overlay layer */
+    padding-top: 10vh;
+}
+
+.taskDetails form {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 75px;
+}
+
+.taskDetails form #taskNotes {
+  width: 300px;
+  height: 200px;
+  resize: none;
+}
+
+.taskDetails .label {
+  transform: scale(1.8);
+  margin-top: 30px;
+  margin-left: 48px;
+}
+
+.taskDetails .removeTask {
+  position: absolute;
+  top: 15vh;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.addTask{
+  position: fixed;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  bottom: 10px;
+  right: 10px;
+  font-size: 25px;
+}
+
+.dismissIcon{
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 48px;
+  color: black;
+}
+
+/* \checklist page */

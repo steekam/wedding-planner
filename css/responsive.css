@@ -28,6 +28,18 @@
     .progress-card{
         padding-left: 0;
     }
+
+    .options{
+        font-size:100%;
+    }
+
+    .taskDetails{
+        width: 100%;
+    }
+
+    .dismissIcon{
+        font-size: 30px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -44,8 +56,17 @@
     .progress-card{
         padding-left: 0;
     }
+
+    .taskDetails{
+        width: 70%;
+    }
+
+    .dismissIcon{
+        font-size: 30px;
+    }
 }
 
 @media (max-width: 1200px){
     
+
 }

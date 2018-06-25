@@ -80,7 +80,7 @@
                   </li>
                   <li>
                       <a>
-                        <i class="fa fa-gift center"></i>
+                        <i class="fa fa-gift"></i>
                         <span>Registry</span> 
                         <span class="label label-success pull-right">ComingSoon</span>
                       </a>
@@ -216,7 +216,7 @@
                     </div>
                   </a>
 
-                  <a href="">
+                  <a href="account/checklist/checklist.php">
                     <div class="row progress-card">
                       <div class="theProgress col-md-5 col-xs-5 col-sm-5">
                         <div class="progress_content">

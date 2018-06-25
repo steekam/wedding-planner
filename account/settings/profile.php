@@ -71,7 +71,7 @@
                   </li>
                   <li>
                       <a>
-                        <i class="fa fa-gift center"></i>
+                        <i class="fa fa-gift"></i>
                         <span>Registry</span> 
                         <span class="label label-success pull-right">ComingSoon</span>
                       </a>
