@@ -45,6 +45,7 @@ function main() {
         var btn = $(event.target);
         
         if (btn.is('i.fa.fa-pencil')){
+            $('#taskSubmit').val("Update Task");
             var myTh = $(this).siblings('th');
             var checkBoxArr = myTh.find('.taskStatus');
             var checkBox = checkBoxArr[0];
@@ -63,6 +64,8 @@ function main() {
 
             var notes = myTh.find('.taskNotes').text();
             $('.taskDetails #taskNotes').val(notes);
+        }else{
+            $('#taskSubmit').val("Add New Task");
         }
     });
 }

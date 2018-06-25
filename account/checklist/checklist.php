@@ -194,7 +194,7 @@
                 <textarea name="taskNotes" id="taskNotes" class="form-control" placeholder="Your notes"></textarea>
               </div>
 
-              <input type="submit" value="ADD NEW TASK" class="btn btn-success">
+              <input type="submit" value="ADD NEW TASK" id="taskSubmit" class="btn btn-success">
 
             </form>
           </div>
