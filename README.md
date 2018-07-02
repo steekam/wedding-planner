@@ -15,7 +15,8 @@
     <li>Bootstrap</li>
     <li>CSS tricks from CodePen projects</li>
     <li>Font-awesome</li>
-    <li>Animate.css class for aniations</li>
+    <li>Animate.css class for animations</li>
+    <li>Gentella dashboard</li>
   </ul>
 <h3>Contributors:</h3>
 <a href="https://github.com/steekam">Kamau Wanyee</a> <br>

@@ -41,6 +41,14 @@
 					setcookie("id",$row["id"], time() + (86400 * 30), "/" );
 				}
 				$_SESSION["id"] = $row["id"];
+				
+				//Direct to the admin if admin
+				if($username == 'admin'){
+					header("Location: administrator/index.php");
+					exit();
+				}
+
+
 				//The first login to be directed to account setup
 				if($row['account_setup']=="0"){
 					$_SESSION['valid'] = "1";

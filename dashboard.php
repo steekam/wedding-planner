@@ -178,7 +178,7 @@
                   <div class="row" style="margin-top: 30px;">
                     <div class="sentiment">
                       <img src="assets/image/icons/wedding.png" alt="">
-                      <span id="user_lastname">Spaniard</span>  &  <span id="partner_lastname">Doubtfire</span>
+                      <span id="user_lastname"></span>  &  <span id="partner_lastname"></span>
                     </div>                
                   </div>
                 </div>
@@ -220,7 +220,7 @@
                     <div class="row progress-card">
                       <div class="theProgress col-md-5 col-xs-5 col-sm-5">
                         <div class="progress_content">
-                          <b id=perc_completed"">30%</b> <br>completed
+                          <b id="perc_completed"></b> <br>completed
                         </div>
                       </div>
 
