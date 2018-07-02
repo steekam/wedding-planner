@@ -27,6 +27,8 @@
     <link href="../../lib/gentella/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- Switchery -->
     <link href="../../lib/gentella/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- Datatables -->
+    
     
 
     <!-- Custom Theme Style -->
@@ -142,7 +144,7 @@
               <div class="">
               <div class="">Show completed tasks</div>
                 <label>
-                  <input type="checkbox" class="js-switch" checked />
+                  <input type="checkbox" class="js-switch" id="completeToggle" checked />
                 </label>
               </div>
             </div>
@@ -167,26 +169,34 @@
           <div class="taskDetails">
             <button type="button" class="dismissIcon"><i class="fa fa-close"></i></span>
             </button>
-
-            <label class="label col-md-6">
-              <input  class="label__checkbox taskStatus" type="checkbox" />
-              <span class="label__text">
-                <span class="label__check">
-                  <i class="fa fa-check icon"></i>
-                </span>
-              </span>
-            </label>
-
-            <button class="btn btn-danger removeTask"><i class="fa fa-trash"></i></button>
-
+            
             <form method="post" class="form-horizontal form-label-left">
+
+              <div style="display:flex">
+                <label class="label">
+                  <input  class="label__checkbox taskStatus" type="checkbox" />
+                  <span class="label__text">
+                    <span class="label__check">
+                      <i class="fa fa-check icon"></i>
+                    </span>
+                  </span>
+                </label>
+
+                <div class="">
+                  <button class="btn btn-danger removeTask"><i class="fa fa-trash"></i></button>
+                </div>
+              </div>
+
               <div class="form-group ">
+                <!-- Hidden field to store taskId -->
+                <input type="text" name="taskId" id="taskId">
+
                 <label for="summary">Task</label>
-                <input type="text" name="summary" id="summary" class="col-md-6 form-control">
+                <input type="text" name="summary" id="summary" class="col-md-6 form-control" required>
               </div>
               <div class="form-group has-feedback">
                 <label for="dueDate">Due date</label>
-                <input type="text" name="dueDate" id="dueDate" class="form-control">
+                <input type="text" name="dueDate" id="dueDate" class="form-control" autocomplete="off" required>
                 <span class="fa fa-calendar form-control-feedback right changeDate" aria-hidden="true"></span>
               </div>
               <div class="form-group">
@@ -194,60 +204,22 @@
                 <textarea name="taskNotes" id="taskNotes" class="form-control" placeholder="Your notes"></textarea>
               </div>
 
-              <input type="submit" value="ADD NEW TASK" id="taskSubmit" class="btn btn-success">
+              <div>
+                <input type="button" value="Add New Task" id="addTask" class="btn btn-success">
+                <input type="button" value="Update Task" id="updateTask" class="btn btn-success">
+              </div>              
 
             </form>
           </div>
           <!-- /Add task -->
 
           <div class="checklist-wrapper ">
-            <div class="row">
-              <label class="col-md-12 col-xs-12 col-sm-12">JULY 2018</label>
+            <div>
+              <h3>A GUIDE TO YOUR WEDDING DAY</h3>
             </div>
-              <table class="checklist ">
+              <table class="checklist">
                 <tbody>
-                  <tr>
-                    <th class="row col-md-10" style="padding:8px 0 0 0;">
-                      <label class="label col-md-1">
-                        <input  class="label__checkbox taskStatus" type="checkbox" />
-                        <span class="label__text">
-                          <span class="label__check">
-                            <i class="fa fa-check icon"></i>
-                          </span>
-                        </span>
-                      </label>
-                      <div class="col-md-11 task">
-                        <span class="task-content">Check venues</span><br>
-                        <small>Due <span class="due-date">July 8</span></small>
-                        <span style="display: none" class="taskNotes">Make sure the Indian engraves it.</span>
-                      </div>
-                    </th>
-                    <div class="col-md-2">
-                      <td class="options edit"><i class="fa fa-pencil"></i></td>
-                      <td class="options remove"><i class="fa fa-trash-o"></i></td>
-                    </div>                                    
-                  </tr>
-                  <tr>
-                    <th class="row col-md-10" style="padding:8px 0 0 0;">
-                      <label class="label col-md-1">
-                        <input  class="label__checkbox taskStatus" type="checkbox" />
-                        <span class="label__text">
-                          <span class="label__check">
-                            <i class="fa fa-check icon"></i>
-                          </span>
-                        </span>
-                      </label>
-                      <div class="col-md-11 task">
-                        <span class="task-content">Insure rings</span><br>
-                        <small>Due <span class="due-date">July 8</span></small>
-                        <span style="display: none" class="taskNotes">Make sure the Indian engraves it.</span>
-                      </div>
-                    </th>
-                    <div class="col-md-2">
-                      <td class="options edit"><i class="fa fa-pencil"></i></td>
-                      <td class="options remove"><i class="fa fa-trash-o"></i></td>
-                    </div>                                    
-                  </tr>
+                 
                 </tbody>
               </table>            
           </div>
@@ -266,6 +238,7 @@
     <script src="../../lib/gentella/vendors/validator/validator.js"></script>
     <!-- Switchery -->
     <script src="../../lib/gentella/vendors/switchery/dist/switchery.min.js"></script>
+   
     
     <!-- Local javascript -->
     <script src="checklist.js"></script>

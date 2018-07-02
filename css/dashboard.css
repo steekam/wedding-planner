@@ -198,11 +198,18 @@ sup {
   }
 }
 
+.checklist-wrapper{
+  padding-bottom: 90px;
+}
 
 .checklist{
-    width: 95%;
+    width: 87%;
     margin: 0 auto;
     table-layout: fixed;
+}
+
+.checklist th {
+  padding:8px 0 0 0;
 }
 
 
@@ -215,6 +222,10 @@ sup {
   font-size: 145%;
   padding: 8px;
   cursor:pointer;
+}
+
+.taskNotes, .taskDetails #taskId {
+  display: none;
 }
 
 .fixed {
@@ -236,7 +247,7 @@ body {
 }
 
 .taskDetails {
-    width: 40%;
+    width: 30%;
     height: 100vh;
     position: fixed;
     top: 0; 
@@ -249,7 +260,7 @@ body {
 .taskDetails form {
   width: 85%;
   margin: 0 auto;
-  margin-top: 75px;
+  margin-top: 55px;
 }
 
 .taskDetails form #taskNotes {
@@ -260,20 +271,17 @@ body {
 
 .taskDetails .label {
   transform: scale(1.8);
-  margin-top: 30px;
-  margin-left: 48px;
 }
 
 .taskDetails .removeTask {
-  position: absolute;
-  top: 15vh;
   border-radius: 50%;
-  margin-left: 10px;
+  margin-left:10px; 
 }
 
 .addTask{
   position: fixed;
   border-radius: 50%;
+  z-index: 2;
   width: 50px;
   height: 50px;
   bottom: 10px;

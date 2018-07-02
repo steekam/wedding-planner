@@ -2,7 +2,7 @@
     session_start();
 
     if (!isset($_POST['valid'])) {
-        header("Location: index.php");
+        header("Location: ../../index.php");
     }
 
     require_once ('../../connect.php');

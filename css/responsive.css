@@ -12,6 +12,7 @@
         width: 100%;
         background-color:#A76B57; 
     }
+
 }
 
 @media (max-width: 768px) {
@@ -58,15 +59,12 @@
     }
 
     .taskDetails{
-        width: 70%;
+        width: 40%;
     }
 
     .dismissIcon{
         font-size: 30px;
     }
-}
 
-@media (max-width: 1200px){
     
-
 }
