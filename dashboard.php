@@ -70,35 +70,11 @@
                       <a href="account/checklist/checklist.php"><i class="fa fa-check-circle-o"></i> Checklist </a>                    
                   </li>
                   <li>
-                      <a><i class="fa fa-money"></i> Budgeter </a>
+                      <a href="account/budgeter/budgeter.php"><i class="fa fa-money"></i> Budgeter </a>
                   </li>
-                  <li>
-                      <a><i class="fa fa-user-plus"></i> Guest list </a>
-                  </li>
-                  <li>
-                      <a><i class="fa fa-clock-o"></i> Wedding Day Timeline </a>
-                  </li>
-                  <li>
-                      <a>
-                        <i class="fa fa-gift"></i>
-                        <span>Registry</span> 
-                        <span class="label label-success pull-right">ComingSoon</span>
-                      </a>
-                  </li>
-                  <li>
-                      <a>
-                        <i class="fa fa-desktop"></i> 
-                        <span>Wedding Website</span> 
-                        <span class="label label-success pull-right">ComingSoon</span>
-                      </a>
-                  </li>
-                  <li>
-                      <a>
-                        <i class="fa fa-truck"></i> 
-                        <span>Vendors</span>
-                        <span class="label label-success pull-right">ComingSoon</span>
-                      </a>
-                  </li>                  
+                  <!-- <li>
+                      <a href="account/guest-list/guestlist.php"><i class="fa fa-user-plus"></i> Guest list </a>
+                  </li> -->
                 </ul>
               </div>           
             </div>
@@ -132,12 +108,6 @@
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li><a href="account/settings/profile.php"> Profile</a></li>
-                    <li>
-                      <a href="javascript:;">
-                        <span class="badge bg-red pull-right">50%</span>
-                        <span>Settings</span>
-                      </a>
-                    </li>
                     <li><a href="index.php?logout=1"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
@@ -184,7 +154,7 @@
                 </div>
                 
                 <div class="row sentiment"  style="font-size:17px;">
-                  <i class="fa fa-calendar col-md-1"></i> <div id="wedding_date" class="col-md-6">30/5/18</div>
+                  <i class="fa fa-calendar col-md-1"></i> <div id="wedding_date" class="col-md-6"></div>
                 </div>
 
               </div>
@@ -198,12 +168,12 @@
                   <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
-                  <a href="">
+                  <a href="account/budgeter/budgeter.php">
                     <div class="row progress-card">
                       <div class="theProgress col-md-5 col-xs-5 col-sm-5">
                         <div class="progress_content">
-                          <span><sup>ksh</sup><span id="used_budget">3,000</span> </span><br>
-                          <small>of <b id="total_budget">800K</b></small>
+                          <span><sup>ksh</sup><span id="used_budget"></span> </span><br>
+                          <small>of <b id="total_budget"></b></small>
                         </div>
                       </div>
 
@@ -233,7 +203,7 @@
                     </div>
                   </a>
 
-                  <a href="">
+                  <a href="account/guest-list/guestlist.php">
                     <div class="row progress-card">
                       <div class="theProgress col-md-5 col-xs-5 col-sm-5">
                         <div class="progress_content" style="font-size: 80%">

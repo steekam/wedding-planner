@@ -69,7 +69,7 @@
                   <li class="active">
                       <a href="#"><i class="fa fa-inbox"></i> Mail</a>
                   </li>
-                                    
+                              
                 </ul>
               </div>           
             </div>
@@ -94,6 +94,10 @@
 
                 <ul class="nav navbar-nav navbar-left">
                   <li><a class = "site_title" href="dashboard.php">WEDDING WIRE</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a  href="../index.php?logout=1"><button class="btn btn-info">LOG OUT</button></a></li>
                 </ul>
               
             </nav>

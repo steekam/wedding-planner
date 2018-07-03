@@ -34,12 +34,29 @@
         font-size:100%;
     }
 
-    .taskDetails{
+    .expense{
+        font-size: 95%;
+        padding-left: 0;
+    }
+
+    .budgeter thead th {
+        font-size: 90%;
+    }
+
+    .budgeter td .label {
+        display: none;
+    }
+
+    .taskDetails, .expenseDetails{
         width: 100%;
     }
 
     .dismissIcon{
         font-size: 30px;
+    }
+
+    .wrapIcons {
+        display: none;
     }
 }
 
@@ -58,13 +75,15 @@
         padding-left: 0;
     }
 
-    .taskDetails{
+    .taskDetails, .expenseDetails{
         width: 40%;
     }
 
     .dismissIcon{
         font-size: 30px;
     }
+
+    
 
     
 }

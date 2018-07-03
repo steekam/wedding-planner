@@ -124,7 +124,6 @@ function clearFields(form) {
 }
 
 function fetch_tasks(){
-    $('.taskNotes').hide();
     var taskData;
     $.post('fetch_tasks.php',{'valid':'true'},function(data){
         taskData = data; 
@@ -281,8 +280,6 @@ function fetch_undone() {
             var notasks = "<p>Currently no tasks. <br>Start now to keep your wedding on track.</p>";
             $('.checklist tbody').html(notasks);
         }
-
-
     }).fail(function () {
         console.log("Error in fetch of tasks");
     }); 

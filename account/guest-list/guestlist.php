@@ -16,7 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>WEDDING WIRE | CHECKLIST </title>
+    <title>WEDDING WIRE | GUEST LIST </title>
     <link rel="icon" type="image/ico" href="../../favicon.ico">    
 
     <!-- Bootstrap -->
@@ -41,8 +41,6 @@
 
   <body class="nav-md">
     <div class="container body">
-          <div class="overlay"></div>
-
       <div class="main_container">
         <div class="col-md-3 left_col" id="side_menu">
           <div class="left_col scroll-view">
@@ -55,15 +53,15 @@
                   <li>
                       <a href="../../dashboard.php"><i class="fa fa-home"></i> Dashboard </a>                    
                   </li>
-                  <li class="active">
-                      <a href="#"><i class="fa fa-check-circle-o"></i> Checklist </a>                    
+                  <li>
+                      <a href="../checklist/checklist.php"><i class="fa fa-check-circle-o"></i> Checklist </a>                    
                   </li>
                   <li>
                       <a href="../budgeter/budgeter.php"><i class="fa fa-money"></i> Budgeter </a>
                   </li>
-                  <!-- <li>
-                      <a href="../guest-list/guestlist.php"><i class="fa fa-user-plus"></i> Guest list </a>
-                  </li> -->
+                  <li class="active">
+                      <a href="#"><i class="fa fa-user-plus"></i> Guest list </a>
+                  </li>
                 </ul>
               </div>           
             </div>
@@ -109,90 +107,7 @@
 
         <!-- page content -->
         <div class="right_col" role="main">
-          <div class="page-title">
-            <div class="title_left">
-              <div class="">
-              <div class="">Show completed tasks</div>
-                <label>
-                  <input type="checkbox" class="js-switch" id="completeToggle" checked />
-                </label>
-              </div>
-            </div>
-
-            <div class="title_right">
-              <div class="form-group pull-right top_search">
-                <div class="input-group">
-                  <input type="text" class="form-control search" placeholder="Search">
-                  <span class="input-group-btn">
-                    <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
           
-          <!-- Add task -->
-          <div>
-            <button data-toggle="tooltip" data-placement="top" title="Add New Task" class="addTask btn btn-info"><i class="fa fa-plus"></i></button>
-          </div>
-
-          <div class="taskDetails">
-            <button type="button" class="dismissIcon"><i class="fa fa-close"></i></span>
-            </button>
-            
-            <form method="post" class="form-horizontal form-label-left">
-
-              <div style="display:flex">
-                <label class="label">
-                  <input  class="label__checkbox taskStatus" type="checkbox" />
-                  <span class="label__text">
-                    <span class="label__check">
-                      <i class="fa fa-check icon"></i>
-                    </span>
-                  </span>
-                </label>
-
-                <div class="">
-                  <button class="btn btn-danger removeTask"><i class="fa fa-trash"></i></button>
-                </div>
-              </div>
-
-              <div class="form-group ">
-                <!-- Hidden field to store taskId -->
-                <input type="text" name="taskId" id="taskId">
-
-                <label for="summary">Task</label>
-                <input type="text" name="summary" id="summary" class="col-md-6 form-control" required>
-              </div>
-              <div class="form-group has-feedback">
-                <label for="dueDate">Due date</label>
-                <input type="text" name="dueDate" id="dueDate" class="form-control" autocomplete="off" required>
-                <span class="fa fa-calendar form-control-feedback right changeDate" aria-hidden="true"></span>
-              </div>
-              <div class="form-group">
-                <label for="taskNotes">Notes</label><br>
-                <textarea name="taskNotes" id="taskNotes" class="form-control" placeholder="Your notes"></textarea>
-              </div>
-
-              <div>
-                <input type="button" value="Add New Task" id="addTask" class="btn btn-success">
-                <input type="button" value="Update Task" id="updateTask" class="btn btn-success">
-              </div>              
-
-            </form>
-          </div>
-          <!-- /Add task -->
-
-          <div class="checklist-wrapper ">
-            <div>
-              <h3>A GUIDE TO YOUR WEDDING DAY</h3>
-            </div>
-              <table class="checklist">
-                <tbody>
-                 
-                </tbody>
-              </table>            
-          </div>
         </div>
         <!-- /page content -->
 

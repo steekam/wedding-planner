@@ -20,5 +20,11 @@
     z-index: 3;
 }
 
+.tt-open {
+    background:#C99381;
+    padding: 10px;
+    width: 100%;
+}
+
 
 /* /mail page */

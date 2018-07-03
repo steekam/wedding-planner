@@ -1,63 +1,29 @@
-/* 
-    The dashboard page
-*/
-.theProgress{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border: 2px dashed rgb(172, 84, 84);
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    margin-bottom: 5px;
+.topTitle {
+    background: white;
+    
 }
 
-.progress-card{
-    padding: 25px 20px;
-    border-bottom: 1px solid rgb(156, 105, 105);
+#intro-text {
+    padding: 30px;
 }
 
-#budget_used{
-    font-size: 130%
+#intro-text p {
+    font-size: 125%;
 }
 
-sup {
-    font-size: 9px;
+#budget {
+    color: blue;
 }
 
-.pg_description{
-    margin-left: 20px;
-    margin-top: 20px;
-    font-size: 155%;
+.editBudget{
+    cursor: pointer;
 }
 
-.pg_byline {
-    font-size: 78%;
+.topIcon {
+    margin-bottom: 20px;
 }
 
-.pg_arrow{
-    float: right;
-}
-
-.wedding-image>img{
-    width: 100%;
-    /* height: 30%; */
-}
-
-@import url('https://fonts.googleapis.com/css?family=Lobster');
-.sentiment{
-    font-family: 'Lobster', cursive;
-    font-weight: bold;
-    font-size: 20px;
-    font-size: 135%;
-    text-transform: uppercase;
-}
-
-/* \Profile page */
-
-/* Checklist page */
-
+/* Cool checkbox */
 .label__checkbox {
   display: none;
 }
@@ -66,8 +32,8 @@ sup {
   border: 5px solid rgba(88, 47, 33, 0.404);
   background: white;
   vertical-align: middle;
-  width: 2.5em;
-  height: 2.5em;
+  width: 2.2em;
+  height: 2.2em;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -76,7 +42,7 @@ sup {
 }
 .label__check i.icon {
   opacity: 0.8;
-  font-size: 10px;
+  font-size: 8px;
   color: rgb(88, 47, 33);
   transition: opacity .3s .1s ease;
   -webkit-text-stroke: 3px rgba(0, 0, 0, 0.5);
@@ -124,8 +90,8 @@ sup {
   }
   to {
     opacity: 1;
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 @-webkit-keyframes check {
@@ -149,15 +115,15 @@ sup {
     border-width: 0;
   }
   50% {
-    width: 2.5em;
-    height: 2.5em;
+    width: 2.2em;
+    height: 2.2em;
     background: rgb(172, 84, 84);
     border: 0;
     opacity: 0.6;
   }
   100% {
-    width: 2.5em;
-    height: 2.5em;
+    width: 2.2em;
+    height: 2.2em;
     background: rgb(172, 84, 84);
     border: 0;
     opacity: 1;
@@ -184,54 +150,77 @@ sup {
     border-width: 0;
   }
   50% {
-    width: 2.5em;
-    height: 2.5em;
+    width: 2.2em;
+    height: 2.2em;
     background: rgb(172, 84, 84);
     border: 0;
     opacity: 0.6;
   }
   100% {
-    width: 2.5em;
-    height: 2.5em;
+    width: 2.2em;
+    height: 2.2em;
     background: rgb(172, 84, 84);
     border: 0;
     opacity: 1;
   }
 }
+/* /Cool checkbox */
 
-.checklist-wrapper{
-  padding-bottom: 90px;
+/* Search bar */
+.top_search{
+    width: 50%;
+    margin-top: 20px;
 }
 
-.checklist{
+.budgeter-wrapper{
+    padding-left: 20px;
+    padding-bottom: 90px;
+}
+/* Budgeter table */
+.budgeter {
     width: 87%;
     margin: 0 auto;
-    table-layout: fixed;
-}
-
-.checklist th {
-  padding:8px 0 0 0;
 }
 
 
-.task {
-    padding: 8px 0 0 0 ;
+thead th:not(:first-child) {
+    text-align: center;
 }
+
+thead th {
+    text-transform: uppercase;
+}
+
+tbody td:not(:first-child){
+    text-align: center;
+}
+
+tbody td.amount {
+    width: 15%;
+}
+
 .options{
-  text-align: right;
-  width: 25px;
+  width: 100px;
   font-size: 145%;
-  padding: 8px;
-  cursor:pointer;
 }
 
-.taskNotes, .taskDetails #taskId {
+.options i {
+    cursor:pointer;
+    margin-right: 5px;
+}
+
+.expense {
+    padding-left: 20px;
+}
+
+.expenseNotes, .expenseDetails #expenseId, .hide {
   display: none;
 }
 
 .fixed {
   position: fixed;
 }
+/* /Budgeter table */
 
 body {
   position: relative;
@@ -247,7 +236,7 @@ body {
     z-index: 10;
 }
 
-.taskDetails {
+.expenseDetails {
     width: 30%;
     height: 100vh;
     position: fixed;
@@ -255,31 +244,35 @@ body {
     right: 0;
     background-color: white;
     z-index: 11; /* 1px higher than the overlay layer */
-    padding-top: 10vh;
+    overflow-y: scroll;
 }
 
-.taskDetails form {
+.expenseDetails form {
   width: 85%;
   margin: 0 auto;
   margin-top: 55px;
 }
 
-.taskDetails form #taskNotes {
+.bold {
+    font-weight: 700;
+}
+
+.expenseDetails form #expenseNotes {
   width: 300px;
-  height: 200px;
+  height: 150px;
   resize: none;
 }
 
-.taskDetails .label {
+.expenseDetails .label {
   transform: scale(1.8);
 }
 
-.taskDetails .removeTask {
+.expenseDetails .removeExpense {
   border-radius: 50%;
   margin-left:10px; 
 }
 
-.addTask{
+.addExpense{
   position: fixed;
   border-radius: 50%;
   z-index: 2;
@@ -299,5 +292,3 @@ body {
   font-size: 48px;
   color: black;
 }
-
-/* \checklist page */
