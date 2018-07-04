@@ -34,7 +34,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="myNavBar">
-                <ul class="navbar-nav">
+                <!-- <ul class="navbar-nav">
                     <li class="nav-item">
                         <div class="cool-box">PLANNING TOOLS</div>
                     </li>
@@ -50,7 +50,7 @@
                     <li class="nav-item">
                         <div class="cool-box">GALLERY</div>
                     </li>                                  
-                </ul>
+                </ul> -->
 
                 <div id="login-signup" >
                     <a href="signup.php"><button class="mybtn mybtn-outline-primary">SIGN UP</button></a>

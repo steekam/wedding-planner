@@ -46,7 +46,9 @@
 
     <!-- Custom Theme Style -->
     <link href="lib/gentella/build/css/custom.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/dashboard.css"> 
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/animate.css"> 
+    <link rel="stylesheet" href="css/responsive.css">
     
   </head>
 
@@ -65,26 +67,14 @@
                       <a href="#"><i class="fa fa-home"></i> Dashboard </a>                    
                   </li>
                   <li>
-                      <a><i class="fa fa-check-circle-o"></i> Checklist </a>                    
+                      <a href="account/checklist/checklist.php"><i class="fa fa-check-circle-o"></i> Checklist </a>                    
                   </li>
                   <li>
-                      <a><i class="fa fa-money"></i> Budgeter </a>
+                      <a href="account/budgeter/budgeter.php"><i class="fa fa-money"></i> Budgeter </a>
                   </li>
-                  <li>
-                      <a><i class="fa fa-user-plus"></i> Guest list </a>
-                  </li>
-                  <li>
-                      <a><i class="fa fa-gift center"></i> Registry </a>
-                  </li>
-                  <li>
-                      <a><i class="fa fa-desktop"></i> Wedding Website </a>
-                  </li>
-                  <li>
-                      <a><i class="fa fa-truck"></i> Vendors </a>
-                  </li>
-                  <li>
-                      <a><i class="fa fa-clock-o"></i> Wedding Day Timeline </a>
-                  </li>
+                  <!-- <li>
+                      <a href="account/guest-list/guestlist.php"><i class="fa fa-user-plus"></i> Guest list </a>
+                  </li> -->
                 </ul>
               </div>           
             </div>
@@ -108,22 +98,16 @@
               </div>
 
                 <ul class="nav navbar-nav navbar-left">
-                  <li></li><a class = "site_title" href="dashboard.php">WEDDING WIRE</a></li>
+                  <li><a class = "site_title" href="dashboard.php">WEDDING WIRE</a></li>
                 </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    ACCOUNT SETTINGS
+                    ACCOUNT
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li><a href="account/settings/profile.php"> Profile</a></li>
-                    <li>
-                      <a href="javascript:;">
-                        <span class="badge bg-red pull-right">50%</span>
-                        <span>Settings</span>
-                      </a>
-                    </li>
                     <li><a href="index.php?logout=1"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
@@ -138,7 +122,7 @@
         <div class="right_col" role="main">
           <div class="row">
             <!-- Wedding details tile -->
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="x_panel">
                 <div class="x_title">
                   <h2>Your Wedding Details</h2>
@@ -152,26 +136,91 @@
                 </div>
 
                 <div class="x_content">
+                  <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12 wedding-image">
+                      <img src="assets/image/user_cover/beachfront.jpg" alt="">
+                      <form  method="post" enctype="multipart/form-data">
+                        <input type="file" name="cover_image" id="cover_image" style="display: none;">
+                      </form>
+                    </div>
+                  </div>
 
+                  <div class="row" style="margin-top: 30px;">
+                    <div class="sentiment">
+                      <img src="assets/image/icons/wedding.png" alt="">
+                      <span id="user_lastname"></span>  &  <span id="partner_lastname"></span>
+                    </div>                
+                  </div>
+                </div>
+                
+                <div class="row sentiment"  style="font-size:17px;">
+                  <i class="fa fa-calendar col-md-1"></i> <div id="wedding_date" class="col-md-6"></div>
                 </div>
 
               </div>
             </div>
             <!-- End of wedding details tile -->
             <!-- Planning progress tile -->
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="x_panel">
                 <div class="x_title">
                   <h2>Planning progress</h2>
                   <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
-                  <div class="row">
-                    <!-- <div class="col-md-4"> -->
-                      <p>Alternate design</p>
-                      <input class="knob" data-width="60" data-height="120" data-displayPrevious=false data-displayInput=false data-fgColor="#7D4329" data-skin="tron" data-thickness=".3" value="80">
-                    <!-- </div> -->
-                  </div>
+                  <a href="account/budgeter/budgeter.php">
+                    <div class="row progress-card">
+                      <div class="theProgress col-md-5 col-xs-5 col-sm-5">
+                        <div class="progress_content">
+                          <span><sup>ksh</sup><span id="used_budget"></span> </span><br>
+                          <small>of <b id="total_budget"></b></small>
+                        </div>
+                      </div>
+
+                      <div class="pg_description col-md-7 col-xs-7 col-sm-7">
+                        Budgeter <br>
+                        <div class="pg_byline">
+                          Manage your expesnses and keep your day on the budget
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a href="account/checklist/checklist.php">
+                    <div class="row progress-card">
+                      <div class="theProgress col-md-5 col-xs-5 col-sm-5">
+                        <div class="progress_content">
+                          <b id="perc_completed"></b> <br>completed
+                        </div>
+                      </div>
+
+                      <div class="pg_description col-md-7 col-xs-7 col-sm-7">
+                        Checklist <br>
+                        <div class="pg_byline">
+                          Manage your actvities making sure you don't miss a thing
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a href="account/guest-list/guestlist.php">
+                    <div class="row progress-card">
+                      <div class="theProgress col-md-5 col-xs-5 col-sm-5">
+                        <div class="progress_content" style="font-size: 80%">
+                          <b id="invited">100</b> <br>invited <br>
+                          <b id="RSVP">20</b>  <br> RSVP
+                        </div>
+                      </div>
+
+                      <div class="pg_description col-md-7 col-xs-7 col-sm-7">
+                        Guests <br>
+                        <div class="pg_byline">
+                          Manage your guest lists and RSVPs all in one place
+                        </div>                      
+                      </div>
+                    </div>
+                  </a>
+
                 </div>
               </div>
             </div>
@@ -199,5 +248,7 @@
     
     <!-- Custom Theme Scripts -->
     <script src="lib/gentella//build/js/custom.min.js"></script>
+    <!-- Local script -->
+    <script src="lib/dashboard.js"></script>
   </body>
 </html>

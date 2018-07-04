@@ -12,4 +12,78 @@
         width: 100%;
         background-color:#A76B57; 
     }
+
+}
+
+@media (max-width: 768px) {
+    .theProgress {
+        width: 80px;
+        height: 80px;
+    }
+
+    .pg_description{
+        font-size: 135%;
+        margin-top:0;
+    }
+
+    .progress-card{
+        padding-left: 0;
+    }
+
+    .options{
+        font-size:100%;
+    }
+
+    .expense{
+        font-size: 95%;
+        padding-left: 0;
+    }
+
+    .budgeter thead th {
+        font-size: 90%;
+    }
+
+    .budgeter td .label {
+        display: none;
+    }
+
+    .taskDetails, .expenseDetails{
+        width: 100%;
+    }
+
+    .dismissIcon{
+        font-size: 30px;
+    }
+
+    .wrapIcons {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .theProgress {
+        width: 80px;
+        height: 80px;
+    }
+
+    .pg_description{
+        font-size: 135%;
+        margin-top:0;
+    }
+
+    .progress-card{
+        padding-left: 0;
+    }
+
+    .taskDetails, .expenseDetails{
+        width: 40%;
+    }
+
+    .dismissIcon{
+        font-size: 30px;
+    }
+
+    
+
+    
 }

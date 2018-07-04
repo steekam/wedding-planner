@@ -1,7 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
     session_start();  
 
     if (array_key_exists("id", $_COOKIE) OR array_key_exists("id",$_SESSION)) {
@@ -61,26 +58,14 @@ error_reporting(E_ALL);
                       <a href="../../dashboard.php"><i class="fa fa-home"></i> Dashboard </a>                    
                   </li>
                   <li>
-                      <a><i class="fa fa-check-circle-o"></i> Checklist </a>                    
+                      <a href="../checklist/checklist.php"><i class="fa fa-check-circle-o"></i> Checklist </a>                    
                   </li>
                   <li>
-                      <a><i class="fa fa-money"></i> Budgeter </a>
+                      <a href="../budgeter/budgeter.php"><i class="fa fa-money"></i> Budgeter </a>
                   </li>
-                  <li>
-                      <a><i class="fa fa-user-plus"></i> Guest list </a>
-                  </li>
-                  <li>
-                      <a><i class="fa fa-gift center"></i> Registry </a>
-                  </li>
-                  <li>
-                      <a><i class="fa fa-desktop"></i> Wedding Website </a>
-                  </li>
-                  <li>
-                      <a><i class="fa fa-truck"></i> Vendors </a>
-                  </li>
-                  <li>
-                      <a><i class="fa fa-clock-o"></i> Wedding Day Timeline </a>
-                  </li>
+                  <!-- <li>
+                      <a href="../guest-list/guestlist.php"><i class="fa fa-user-plus"></i> Guest list </a>
+                  </li> -->
                 </ul>
               </div>           
             </div>
@@ -104,22 +89,16 @@ error_reporting(E_ALL);
               </div>
 
                 <ul class="nav navbar-nav navbar-left">
-                  <li></li><a class = "site_title" href="dashboard.php">WEDDING WIRE</a></li>
+                  <li><a class = "site_title" href="../../dashboard.php">WEDDING WIRE</a></li>
                 </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    ACCOUNT SETTINGS
+                    ACCOUNT
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li><a href="#"> Profile</a></li>
-                    <li>
-                      <a href="javascript:;">
-                        <span class="badge bg-red pull-right">50%</span>
-                        <span>Settings</span>
-                      </a>
-                    </li>
                     <li><a href="../../index.php?logout=1"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
